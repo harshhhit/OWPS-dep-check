@@ -1,0 +1,13 @@
+steps:
+  - name: 'ubuntu'
+    entrypoint: bash
+    args: 
+      - '-c'
+      - |- 
+        apt-get update
+        apt-get -y install wget
+        apt-get -y install default-jdk
+        https://github.com/jeremylong/DependencyCheck/releases/download/v9.0.8/dependency-check-9.0.8-release.zip
+        unzip dependency-check-9.0.8-release.zip
+        cd dependency-check-9.0.8-release/bin
+        dependency-check.sh  --project dep-check --scan root/test --output depcheac.html
