@@ -10,6 +10,7 @@ steps:
         apt-get -y install unzip
         wget https://github.com/jeremylong/DependencyCheck/releases/download/v9.0.8/dependency-check-9.0.8-release.zip
         unzip dependency-check-9.0.8-release.zip -y
+        pwd
         current_directory=$(pwd)
 
         # cd $current_directory
