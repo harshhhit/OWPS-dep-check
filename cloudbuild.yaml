@@ -9,6 +9,6 @@ steps:
         apt-get -y install default-jdk
         apt-get -y install unzip
         wget https://github.com/jeremylong/DependencyCheck/releases/download/v9.0.8/dependency-check-9.0.8-release.zip
-        unzip dependency-check-9.0.8-release.zip
+        unzip dependency-check-9.0.8-release.zip -y
         cd dependency-check-9.0.8-release/bin
         dependency-check.sh  --project dep-check --scan root/test --output depcheac.html
